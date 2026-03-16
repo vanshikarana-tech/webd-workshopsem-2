@@ -19,3 +19,5 @@ let car=null;
 console.log(typeof car);
 let score;
 console.log(typeof score);
+ const add=(a,b) => a+b;
+    console.log(add(5,3));
