@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif;
+             text-align: center;
+              padding-top: 50px; 
+              background: #fff7ed;
+             }
+        .widget {
+             background: rgb(217, 155, 155);
+             padding: 30px; 
+             display: inline-block; 
+             border-radius: 20px; 
+             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+             width: 600px;
+             height: 300px;
+             }
+        input {
+             padding: 12px; 
+            border: 2px solid #c06317; 
+            border-radius: 10px; 
+            width: 500px; 
+            font-size: 1.2rem; 
+        }
+        #res15 {
+             color: #100e0e; 
+            font-size: 1.5rem; 
+            font-weight: bold;
+             margin-top: 20px; 
+            
+            }
+            h3 { 
+                color: #100e0e; 
+                margin-bottom: 30px; 
+                font-size: 1.5rem;
+                font-weight: bold;
+                }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <h3>°C to °F Converter</h3>
+        <input type="number" id="celsius" placeholder="°C" oninput="convertTemp()">
+        <p><b>Result:</b> The temperature in Fahrenheit is:</p><br>
+        <div id="res15">-- °F</div>
+    </div>
+
+    <script>
+        function convertTemp() {
+            let c = document.getElementById('celsius').value;
+            if (c === "") {
+                document.getElementById('res15').innerText = "-- °F";
+                return;
+            }
+            let f = (c * 9/5) + 32;
+            document.getElementById('res15').innerText = f.toFixed(2) + " °F";
+        }
+    </script>
+</body>
+</html>
